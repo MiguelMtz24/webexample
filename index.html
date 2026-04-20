@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio - Desarrollador</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --accent: #6366f1;
+            --bg: #f8fafc;
+            --bg-dark: #18181b;
+            --text: #18181b;
+            --text-dark: #f8fafc;
+            --card: #fff;
+            --card-dark: #23272f;
+            --transition: 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            transition: background var(--transition), color var(--transition);
+        }
+        body.dark {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        header {
+            text-align: center;
+            padding: 80px 20px 60px 20px;
+            background: linear-gradient(90deg, #212425, var(--accent));
+            color: white;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        h2 {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        section {
+            padding: 48px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .card {
+            background: var(--card);
+            color: var(--text);
+            padding: 28px 22px;
+            margin: 18px 0;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px 0 rgba(99,102,241,0.07);
+            transition: box-shadow var(--transition), background var(--transition), color var(--transition);
+        }
+        body.dark .card {
+            background: var(--card-dark);
+            color: var(--text-dark);
+        }
+        .card:hover {
+            box-shadow: 0 4px 32px 0 rgba(99,102,241,0.13);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+        }
+        button {
+            padding: 12px 28px;
+            border: none;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background var(--transition), transform var(--transition);
+            box-shadow: 0 2px 8px 0 rgba(99,102,241,0.10);
+        }
+        button:hover {
+            background: #4f46e5;
+            transform: translateY(-2px) scale(1.03);
+        }
+        .icon {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .toggle-dark {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            background: var(--card);
+            color: var(--accent);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            box-shadow: 0 2px 8px 0 rgba(99,102,241,0.10);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 100;
+            transition: background var(--transition), color var(--transition);
+        }
+        body.dark .toggle-dark {
+            background: var(--card-dark);
+            color: var(--accent);
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            section { padding: 32px 8px; }
+        }
+    </style>
+</head>
+
+
+<body>
+    <button class="toggle-dark" id="toggleDark" title="Modo claro/oscuro">
+        <i data-feather="moon"></i>
+    </button>
+    <header>
+        <h1>Twencky Four</h1>
+        <p>Desarrollador Web & Aplicaciones</p>
+    </header>
+
+    <section>
+        <h2><i data-feather="zap" class="icon"></i>Servicios</h2>
+        <div class="grid">
+            <div class="card"><i data-feather="monitor" class="icon"></i>Páginas web modernas</div>
+            <div class="card"><i data-feather="cpu" class="icon"></i>Apps en Python</div>
+            <div class="card"><i data-feather="repeat" class="icon"></i>Automatización de procesos</div>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-feather="folder" class="icon"></i>Proyectos</h2>
+
+
+        <div class="card">
+            <h3>Landing Page Negocio</h3>
+            <ul style="list-style:none;padding:0;margin:0 0 12px 0;">
+                <li><strong>Descripción:</strong> Página de aterrizaje diseñada para una empresa de servicios, enfocada en captar clientes potenciales y mostrar los servicios principales de forma clara y atractiva.</li>
+                <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Características:</strong>
+                    <ul style="margin:4px 0 0 18px;">
+                        <li>• Diseño responsivo y minimalista</li>
+                        <li>• Formulario de contacto funcional</li>
+                        <li>• Sección de servicios destacados</li>
+                        <li>• Llamado a la acción (CTA) visible</li>
+                    </ul>
+                </li>
+                <li><strong>Rol:</strong> Diseño y desarrollo completo</li>
+                <li><strong>Año:</strong> 2026</li>
+            </ul>
+            <!-- Imagen de ejemplo, reemplaza src por tu imagen real si tienes una -->
+            <img src="https://via.placeholder.com/600x200?text=Landing+Page+Negocio" alt="Miniatura Landing Page Negocio" style="width:100%;border-radius:8px;margin-bottom:12px;box-shadow:0 2px 8px rgba(99,102,241,0.10);">
+            <div style="display:flex;gap:10px;">
+                <a href="#" target="_blank" style="text-decoration:none;"><button><i data-feather="external-link" class="icon"></i>Ver proyecto</button></a>
+                <a href="#" target="_blank" style="text-decoration:none;"><button style="background:#23272f;"><i data-feather="github" class="icon"></i>Repositorio</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>App de Reclamos</h3>
+            <p>Aplicación en Python conectada a APIs.</p>
+            <button><i data-feather="external-link" class="icon"></i>Ver proyecto</button>
+        </div>
+    </section>
+
+    <section>
+        <h2><i data-feather="code" class="icon"></i>Tecnologías</h2>
+        <p>HTML | CSS | JavaScript | Python | SQL | Power BI</p>
+    </section>
+
+    <section>
+        <h2><i data-feather="mail" class="icon"></i>Contacto</h2>
+        <p>Email: <a href="mailto:miguelmartinezmesa@gmail.com" style="color:var(--accent);text-decoration:none;">miguelmartinezmesa@gmail.com</a></p>
+    </section>
+
+    <script>
+        // Feather icons
+        feather.replace();
+        // Modo oscuro
+        const toggle = document.getElementById('toggleDark');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            // Cambia el icono
+            toggle.innerHTML = document.body.classList.contains('dark')
+                ? '<i data-feather="sun"></i>'
+                : '<i data-feather="moon"></i>';
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
