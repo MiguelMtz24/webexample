@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page de Ejemplo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #ffb703;
+            --accent2: #219ebc;
+            --bg: #fffbe6;
+            --text: #22223b;
+            --card: #ffffff;
+            --shadow: 0 4px 24px rgba(33,158,188,0.10);
+        }
+        body {
+            font-family: 'Quicksand', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: var(--accent2);
+            color: #fff;
+            text-align: left;
+            padding: 48px 24px 32px 24px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 0 0 18px 0;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        .cta {
+            background: var(--accent);
+            color: #22223b;
+            border: none;
+            border-radius: 30px;
+            padding: 14px 38px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta:hover {
+            background: #ffd166;
+            color: var(--accent2);
+        }
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 20px 0 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+        .service-card {
+            background: var(--card);
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            padding: 36px 28px;
+            text-align: center;
+            flex: 1 1 220px;
+            min-width: 220px;
+            max-width: 280px;
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.03);
+        }
+        .service-card h3 {
+            color: var(--accent2);
+            margin-bottom: 10px;
+        }
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 32px;
+        }
+        .testimonial {
+            background: #e0f7fa;
+            border-radius: 24px;
+            padding: 24px 18px;
+            font-style: italic;
+            color: #22223b;
+            min-width: 220px;
+            max-width: 340px;
+            box-shadow: var(--shadow);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            padding: 32px 24px;
+        }
+        input, textarea {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #bde0fe;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        input[type="submit"] {
+            background: var(--accent2);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: var(--accent);
+            color: var(--accent2);
+        }
+        @media (max-width: 700px) {
+            .services, .testimonials {
+                flex-direction: column;
+                align-items: center;
+            }
+            .section { padding: 32px 8px 0 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejemplo de Landing Page</h1>
+        <p>¡Haz crecer tu negocio con una presencia web moderna y atractiva!</p>
+        <a href="https://miguelmtz24.github.io/webexample/" target="_blank"><button class="cta">Solicita tu demo</button></a>
+    </header>
+
+    <div class="section">
+        <h2 style="color:var(--accent2);text-align:center;font-size:2rem;">Servicios para cualquier negocio</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Diseño Web</h3>
+                <p>Páginas modernas, responsivas y personalizadas para tu empresa.</p>
+            </div>
+            <div class="service-card">
+                <h3>Marketing Digital</h3>
+                <p>Impulsa tu marca y atrae más clientes con estrategias efectivas.</p>
+            </div>
+            <div class="service-card">
+                <h3>Soporte Técnico</h3>
+                <p>Asistencia rápida y profesional para tu sitio web o negocio.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 style="color:var(--accent2);text-align:center;font-size:2rem;">Testimonios</h2>
+        <div class="testimonials">
+            <div class="testimonial">"¡Nuestra página luce increíble y recibimos más contactos!"<br><b>- Cliente Genérico</b></div>
+            <div class="testimonial">"El proceso fue rápido y sencillo, ¡muy recomendados!"<br><b>- Empresa Satisfecha</b></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 style="color:var(--accent2);text-align:center;font-size:2rem;">Contáctanos</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="¿En qué podemos ayudarte?" rows="4" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <footer style="text-align:center;padding:32px 0;color:var(--accent2);font-size:1.1rem;">
+        © 2026 Ejemplo de Landing Page. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
